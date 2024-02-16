@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Support Information</title>
+      <style>
+         .content {
+         display: none;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Support Information</h1>
+      <select id="language-switcher">
+         <option value="english">English</option>
+         <option value="german">German</option>
+      </select>
+      <!-- English Version -->
+      <div id="english" class="content">
+         <h2>Support Information - English</h2>
+         <h3>Contacting Support</h3>
+         <p>If you require assistance or have any questions, our support team is here to help you. You can reach out to us through the following channels:</p>
+         <ul>
+            <li>Email: stradke@web.de</li>
+<!--            <li>Phone: +1 234 567 8900</li>
+            <li>Live Chat: Available on our website during business hours</li>
+			-->
+         </ul>
+         <h3>Business Hours</h3>
+         <p>Our support team is available Monday to Friday, 9:00 AM to 5:00 PM (EST). We strive to respond to all inquiries within 24 hours.</p>
+      </div>
+      <!-- German Version -->
+      <div id="german" class="content">
+         <h2>Supportinformationen - Deutsch</h2>
+         <h3>Kontaktaufnahme mit dem Support</h3>
+         <p>Wenn Sie Hilfe benötigen oder Fragen haben, steht Ihnen unser Support-Team zur Verfügung. Sie können uns über die folgenden Kanäle erreichen:</p>
+         <ul>
+            <li>E-Mail: stradke@web.de</li>
+<!--            <li>Telefon: +49 123 456 7890</li>
+            <li>Live-Chat: Verfügbar auf unserer Website während der Geschäftszeiten</li>
+			-->
+         </ul>
+         <h3>Geschäftszeiten</h3>
+         <p>Unser Support-Team ist von Montag bis Freitag von 9:00 bis 17:00 Uhr (MEZ) erreichbar. Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten.</p>
+      </div>
+      <script>
+         document.getElementById('language-switcher').addEventListener('change', function() {
+             var language = this.value;
+             document.getElementById('english').style.display = (language === 'english') ? 'block' : 'none';
+             document.getElementById('german').style.display = (language === 'german') ? 'block' : 'none';
+         });
+         document.getElementById('language-switcher').dispatchEvent(new Event('change'));
+      </script>
+   </body>
+</html>
